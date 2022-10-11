@@ -17,6 +17,7 @@ In order to design our dimensional model, we have to use data that is scattered 
 
 Here's the result of my dimensional model surrounding the Online Sales business process (Fact) :point_down:	:
 
+TODO once data mart tables have been created
 
 ## Creating the staging database
 To build our dimensional model, we will need to bring the data we need from the OLTP database into the staging database. Bringing data to staging database (we pretend we do no have access to the source database permissions, so we just import data in staging database before pulling it in the data warehouse.
