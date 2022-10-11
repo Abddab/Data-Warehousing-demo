@@ -8,3 +8,5 @@ The first step is to download **[AdventureWorks2019's OLTP database](https://lea
 There's two very useful resources I found online to help make sense of the AdventureWorks's dozens of tables and relationships:
 - A **[database schema](https://improveandrepeat.com/2019/02/use-the-adventureworks-sample-database-for-your-examples/)** representing the structure of the database.
 - A **[data dictionary](AdventureWorks_DataDictionary.pdf)** that describes the content of all tables in detail.
+
+Bringing data to staging database (we pretend we do no have access to the source database permissions, so we just import data in staging database before pulling it in the data warehouse.
