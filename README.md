@@ -20,4 +20,6 @@ Here's the result of my dimensional model surrounding the Online Sales business 
 TODO once data mart tables have been created
 
 ## Creating the staging database
-To build our dimensional model, we will need to bring the data we need from the OLTP database into the staging database. Bringing data to staging database (we pretend we do no have access to the source database permissions, so we just import data in staging database before pulling it in the data warehouse.
+To build our dimensional model, we have to bring the tables we need from the OLTP database into a staging database. It is a good practice to load the relevant tables to a staging database instead of manipulating the tables directly in the data source. Also, in a business setting, you often don't have permission to modify the transactional database (that means we have to bring the data in a staging database first). 
+
+Generally, the data source is located on another server, but for the sake of this demo, the data source and the staging database will be located on the same server. The **ETL tool** that will be used to load the data to our staging database will be **SSIS**.
