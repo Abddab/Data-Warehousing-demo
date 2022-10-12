@@ -19,7 +19,7 @@ Here's the result of my dimensional model surrounding the Online Sales business 
 
 TODO once data mart tables have been created
 
-## Creating the staging database
+## Creating the staging database and loading the data
 To build our dimensional model, we have to bring the tables we need from the OLTP database into a staging database. It is a good practice to load the relevant tables to a staging database instead of manipulating the tables directly in the data source. Also, in a business setting, you often don't have permission to modify the transactional database (that means we have to bring the data in a staging database first). So let's create our staging database and the relevant tables needed to create the dimensional model for the **online sales**
 
 ![image](https://user-images.githubusercontent.com/56210553/195262686-69226974-9cf5-4eac-ada9-1b800ed2cc69.png)
@@ -32,3 +32,6 @@ Now that the staging database has been created, we need to populate the tables w
 
 ![image](https://user-images.githubusercontent.com/56210553/195264955-eb452a6b-310b-46f6-828c-b4ecae0638f9.png)
 
+## Creating the Data Warehouse and loading the data
+
+## Bringing the Dimensional model into PowerBI and create meaningful reports
