@@ -204,3 +204,15 @@ CREATE TABLE [Sales].[SalesTerritory](
 	[ModifiedDate] [datetime] NULL
 ) ON [PRIMARY]
 GO
+
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [Sales].[SpecialOfferProduct](
+	[SpecialOfferID] [int] NULL,
+	[ProductID] [int] NULL,
+	[rowguid] [uniqueidentifier] NULL,
+	[ModifiedDate] [datetime] NULL
+);
+GO
