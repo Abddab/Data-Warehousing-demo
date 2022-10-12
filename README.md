@@ -20,6 +20,15 @@ Here's the result of my dimensional model surrounding the Online Sales business 
 TODO once data mart tables have been created
 
 ## Creating the staging database
-To build our dimensional model, we have to bring the tables we need from the OLTP database into a staging database. It is a good practice to load the relevant tables to a staging database instead of manipulating the tables directly in the data source. Also, in a business setting, you often don't have permission to modify the transactional database (that means we have to bring the data in a staging database first). 
+To build our dimensional model, we have to bring the tables we need from the OLTP database into a staging database. It is a good practice to load the relevant tables to a staging database instead of manipulating the tables directly in the data source. Also, in a business setting, you often don't have permission to modify the transactional database (that means we have to bring the data in a staging database first). So let's create our staging database and the relevant tables needed to create the dimensional model for the **online sales**
 
-Generally, the data source is located on another server, but for the sake of this demo, the data source and the staging database will be located on the same server. The **ETL tool** that will be used to load the data to our staging database will be **SSIS**.
+![image](https://user-images.githubusercontent.com/56210553/195262686-69226974-9cf5-4eac-ada9-1b800ed2cc69.png)
+
+Here's the **[link](STG_AdventureWorks_Demo.sql)** to the script used to create the tables (To obtain the script, simply right click on the source database > Tasks > Generate Scripts > Choose objects > Select specific database objects > Choose the tables you need > Open in new query window).
+
+Generally, the data source is located on another server, but for the sake of this demo, the **data source** (AdventureWorks2019) and the **staging database** (AdventureWorks2019_STG_Demo) will be located on the same server.
+
+Now that the staging database has been created, we need to populate the tables with all the source data. To do that, we will be using **SSIS**, an **ETL tool**. Here's a basic SSIS solution that has the simple task of loading the data of all corresponding tables in the staging database:
+
+![image](https://user-images.githubusercontent.com/56210553/195264955-eb452a6b-310b-46f6-828c-b4ecae0638f9.png)
+
