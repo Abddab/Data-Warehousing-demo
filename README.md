@@ -32,7 +32,9 @@ Now that the staging database has been created, we need to populate the tables w
 
 ![image](https://user-images.githubusercontent.com/56210553/195264955-eb452a6b-310b-46f6-828c-b4ecae0638f9.png)
 
-## Creating the Data Warehouse and loading the data
+CREATE THE DIMENSION AND FACT VIEWS
 
-We will only create views since we are not worried about performance on a database of this scale. 
+## Creating the Data Warehouse and loading the data
+INSERTING THE DATA THROUGH VIEWS INSTANCIATED IN THE STAGING DATABASE
+
 ## Bringing the Dimensional model into PowerBI and create meaningful reports
