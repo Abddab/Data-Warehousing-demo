@@ -34,4 +34,5 @@ Now that the staging database has been created, we need to populate the tables w
 
 ## Creating the Data Warehouse and loading the data
 
+We will only create views since we are not worried about performance on a database of this scale. 
 ## Bringing the Dimensional model into PowerBI and create meaningful reports
