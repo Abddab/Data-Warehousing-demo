@@ -326,5 +326,5 @@ SELECT  h.SalesOrderID,
 
 LEFT JOIN Sales.SalesOrderDetail d
 ON d.SalesOrderID = h.SalesOrderID
-
+	WHERE h.OnlineOrderFlag = 1 --We filter online orders
 GO
