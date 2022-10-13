@@ -19,7 +19,7 @@ In this demo, we will build a sales data mart that will reside in the data wareh
 ## Designing the dimensional model of the Online Sales
 In order to design our dimensional model, we have to use data that is scattered around the OLTP database and **denormalize the tables**. To complete this step, a deep understanding of the database is necessary. This is where using the data dictionary and database schema presented in the Getting Started step will be useful.
 
-Here's the result of my dimensional model surrounding the Online Sales business process (Fact) :point_down:	:
+Here's the result of a dimensional model surrounding the Online Sales business process (Fact) :point_down:	:
 
 TODO once data mart tables have been created
 
