@@ -216,3 +216,115 @@ CREATE TABLE [Sales].[SpecialOfferProduct](
 	[ModifiedDate] [datetime] NULL
 );
 GO
+
+/****** Object:  Table [Sales].[StateProvince]    Script Date: 10/12/2022 1:54:34 AM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [Sales].[StateProvince](
+	[StateProvinceID] [int] NULL,
+	[StateProvinceCode] [nchar](3) NULL,
+	[CountryRegionCode] [nvarchar](3) NULL,
+	[IsOnlyStateProvinceFlag] [bit]  NULL,
+	[Name] [nvarchar](50) NULL,
+	[TerritoryID] [int] NULL,
+	[rowguid] [uniqueidentifier] NULL,
+	[ModifiedDate] [datetime] NULL,
+);
+GO
+
+/** Let's create the views that represent the Online Sales Fact table and the dimensions **/
+
+/** The Customer Dimension**/
+CREATE VIEW dbo.STG_vw_sales_DIMcustomer 
+AS
+
+SELECT  c.CustomerID,
+		p.EmailPromotion,
+		a.AddressLine1,
+		a.City,
+		a.PostalCode,
+		sp.CountryRegionCode,
+		sp.StateProvinceCode
+
+	FROM Sales.Customer c
+
+LEFT JOIN Sales.Person p 
+ON p.BusinessEntityID = c.PersonID
+
+LEFT JOIN Sales.BusinessEntity be
+ON be.BusinessEntityID = p.BusinessEntityID
+
+LEFT JOIN Sales.BusinessEntityAddress bea
+ON bea.BusinessEntityID = be.BusinessEntityID
+
+LEFT JOIN Sales.Address a
+ON a.AddressID = bea.AddressID
+
+LEFT JOIN Sales.StateProvince sp
+ON sp.StateProvinceID = a.StateProvinceID
+
+WHERE p.PersonType = 'IN';
+
+GO
+
+/** The Product Dimension**/
+CREATE VIEW dbo.STG_vw_sales_DIMproduct
+AS
+
+SELECT  p.ProductID,
+		p.ProductNumber,
+		p.Name,
+		p.MakeFlag,
+		p.Color,
+		p.StandardCost,
+		c.Name AS Category,
+		sc.Name AS Subcategory
+
+	FROM Sales.Product p
+
+LEFT JOIN Sales.ProductSubCategory sc 
+ON sc.ProductSubcategoryID = p.ProductSubcategoryID
+
+LEFT JOIN Sales.ProductCategory c
+ON c.ProductCategoryID = sc.ProductCategoryID
+
+GO
+
+/** The SalesTerritory Dimension**/
+CREATE VIEW dbo.STG_vw_sales_DIMSalesTerritory
+AS
+
+SELECT st.TerritoryID, st.Name, st.CountryRegionCode, st.[Group] 
+	FROM Sales.SalesTerritory st
+
+GO
+
+/** The Online Sales Fact table**/
+CREATE VIEW dbo.STG_vw_sales_FACTOnlineSales
+AS
+SELECT  h.SalesOrderID, 
+		ROW_NUMBER() OVER(partition by h.[SalesOrderID] ORDER BY h.modifieddate) AS saleLineNumber, --One order can contain multiple items
+		d.ProductID, --Foreign key to the product dimension
+		d.OrderQty,
+		d.UnitPrice,
+		d.UnitPriceDiscount,
+		d.LineTotal,
+		h.SubTotal,
+		h.TaxAmt,
+		h.Freight,
+		h.TotalDue,
+		CAST(h.[OrderDate] as DATE) [OrderDate] , -- will be used as a foreign key to the date dimension
+		CAST(h.[DueDate] as DATE) [DueDate],
+		CAST(h.[ShipDate] as DATE) [ShipDate],
+		h.CustomerID, --Foreign key to the customer Dimension
+		h.TerritoryID --Foreign key to the sales territory Dimension
+	
+	FROM Sales.SalesOrderHeader h
+
+LEFT JOIN Sales.SalesOrderDetail d
+ON d.SalesOrderID = h.SalesOrderID
+
+GO
