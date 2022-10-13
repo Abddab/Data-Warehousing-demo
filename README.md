@@ -1,5 +1,5 @@
 # Data Warehousing Demo
-The purpose of this project is to build a Data Warehouse using AdventureWorks's OLTP database as the primary data source. The Data Warehouse will be used to build a BI solution on Microsoft's **PowerBI** platform. There's a good representation of the process this demo will go through.
+The purpose of this project is to build a Data Warehouse using AdventureWorks's OLTP database as the primary data source. The Data Warehouse will be used to build a BI solution on Microsoft's **PowerBI** platform. Here's a good representation of the process this demo will go through.
 <p align="center">
 <img src="https://user-images.githubusercontent.com/56210553/195497260-0b3d0dd2-8034-4b92-a54a-7095552e6308.png"/>
 </p>
