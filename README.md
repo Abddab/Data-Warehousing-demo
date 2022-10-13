@@ -34,6 +34,10 @@ Now that the staging database has been created, we need to populate the tables w
 
 CREATE THE DIMENSION AND FACT VIEWS
 
+A good representation of what we are doing
+
+![image](https://user-images.githubusercontent.com/56210553/195497260-0b3d0dd2-8034-4b92-a54a-7095552e6308.png)
+
 ## Creating the Data Warehouse and loading the data
 INSERTING THE DATA THROUGH VIEWS INSTANCIATED IN THE STAGING DATABASE
 
