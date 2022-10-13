@@ -1,5 +1,9 @@
 # Data Warehousing Demo
-The purpose of this project is to build a Data Warehouse using AdventureWorks's OLTP database as the primary data source. The Data Warehouse will be used to build a BI solution on Microsoft's **PowerBI** platform.
+The purpose of this project is to build a Data Warehouse using AdventureWorks's OLTP database as the primary data source. The Data Warehouse will be used to build a BI solution on Microsoft's **PowerBI** platform. There's a good representation of the process this demo will go through.
+<p align="center">
+<img src="https://user-images.githubusercontent.com/56210553/195497260-0b3d0dd2-8034-4b92-a54a-7095552e6308.png"/>
+</p>
+
 ## Getting started
 The first step is to download **[AdventureWorks2019's OLTP database](https://learn.microsoft.com/en-us/sql/samples/adventureworks-install-configure?view=sql-server-ver16&tabs=ssms)** and instantiate it in your preferred Database and RDBMS. I will be using **[SQL Server](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)** and **[SQL Server Management Studio (SSMS)](https://learn.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver16)**.
 
@@ -34,9 +38,6 @@ Now that the staging database has been created, we need to populate the tables w
 
 CREATE THE DIMENSION AND FACT VIEWS
 
-A good representation of what we are doing
-
-![image](https://user-images.githubusercontent.com/56210553/195497260-0b3d0dd2-8034-4b92-a54a-7095552e6308.png)
 
 ## Creating the Data Warehouse and loading the data
 INSERTING THE DATA THROUGH VIEWS INSTANCIATED IN THE STAGING DATABASE
