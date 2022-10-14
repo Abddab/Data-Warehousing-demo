@@ -17,11 +17,13 @@ There's two very useful resources I found online to help make sense of the Adven
 In this demo, we will build a sales data mart that will reside in the data warehouse. The business process (Fact) that will be modeled is the **online sales** that are fulfilled by AdventureWorks. In the future, if we want to add new data marts and business processes to our data warehouse, simply follow the same blueprint :blue_book:.
 
 ## Designing the dimensional model of the Online Sales
-In order to design our dimensional model, we have to use data that is scattered around the OLTP database and **denormalize the tables**. To complete this step, a deep understanding of the database is necessary. This is where using the data dictionary and database schema presented in the Getting Started step will be useful.
+In order to design our dimensional model, we have to use data that is scattered around the OLTP database and **denormalize the tables**. To complete this step, a deep understanding of the database is necessary. This is where using the data dictionary and database schema presented in the **Getting Started step** will be useful.
 
-Here's the result of a dimensional model surrounding the Online Sales business process (Fact) :point_down:	:
+Here's the result of a dimensional model surrounding the Online Sales business process (Fact). The goal is to go from the original normalized database to this dimensional model :point_down:	:
 
-TODO once data mart tables have been created
+<p align="center">
+<img src="https://user-images.githubusercontent.com/56210553/195767632-2f491073-a24e-434d-beed-4e386ac4c4f4.png"/>
+</p>
 
 ## Creating the staging database and loading the data
 To build our dimensional model, we have to bring the tables we need from the OLTP database into a staging database. It is a good practice to load the relevant tables to a staging database instead of manipulating the tables directly in the data source. Also, in a business setting, you often don't have permission to modify the transactional database (that means we have to bring the data in a staging database first). So let's create our staging database and the relevant tables needed to create the dimensional model for the **online sales**
