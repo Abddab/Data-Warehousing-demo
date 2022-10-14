@@ -47,3 +47,6 @@ CREATE THE DIMENSION AND FACT VIEWS
 INSERTING THE DATA THROUGH VIEWS INSTANCIATED IN THE STAGING DATABASE
 
 ## Bringing the Dimensional model into PowerBI and create meaningful reports
+
+![image](https://user-images.githubusercontent.com/56210553/195769978-38ede812-1a9b-4ff4-919a-5b97e20d0243.png)
+
