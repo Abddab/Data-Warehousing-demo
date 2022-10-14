@@ -38,6 +38,8 @@ Now that the staging database has been created, we need to populate the tables w
 
 ![image](https://user-images.githubusercontent.com/56210553/195264955-eb452a6b-310b-46f6-828c-b4ecae0638f9.png)
 
+The tables we created in our staging database earlier are now populated with the data after executing the SSIS package.
+
 CREATE THE DIMENSION AND FACT VIEWS
 
 
