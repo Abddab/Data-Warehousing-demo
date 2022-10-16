@@ -40,13 +40,22 @@ Now that the staging database has been created, we need to populate the tables w
 
 The tables we created in our staging database earlier are now populated with the data after executing the SSIS package.
 
-CREATE THE DIMENSION AND FACT VIEWS
+We can now use these raw tables to create views for our dimensions and fact. Creating views will make the step of loading data into the dimensional model (that will be located in the data warehouse) very easy.
 
+![Untitled](https://user-images.githubusercontent.com/56210553/196019260-4b3ec9ea-7baf-4d12-9069-8fe0db295a6c.png)
 
 ## Creating the Data Warehouse and loading the data
-INSERTING THE DATA THROUGH VIEWS INSTANCIATED IN THE STAGING DATABASE
+
+The dimensions and fact tables are [created]() and populated with data :
+
+![image](https://user-images.githubusercontent.com/56210553/196019505-9e519408-d84d-491a-acaa-cbdbe672d069.png)
+
+![image](https://user-images.githubusercontent.com/56210553/196019521-6f161c4f-f037-4d4f-a616-af152a787a47.png)
+
 
 ## Bringing the Dimensional model into PowerBI and create meaningful reports
+
+We connect Power BI to the database and import the dimensions and fact:
 
 ![image](https://user-images.githubusercontent.com/56210553/195769978-38ede812-1a9b-4ff4-919a-5b97e20d0243.png)
 
