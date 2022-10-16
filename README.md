@@ -59,7 +59,7 @@ We connect Power BI to the database and import the dimensions and fact:
 
 ![image](https://user-images.githubusercontent.com/56210553/195769978-38ede812-1a9b-4ff4-919a-5b97e20d0243.png)
 
-Here's a simple **Power BI** [sample]() I have created by using the **Online Sales star schema** I've designed earlier. It is the final step of the data warehousing process.   
+Here's a simple **Power BI** [sample](AdventureWorks_USA_Sales.pbix) I have created by using the **Online Sales star schema** I've designed earlier. It is the final step of the data warehousing process.   
 
 ![image](https://user-images.githubusercontent.com/56210553/196018680-4aa646ba-f5b6-4560-821b-f823852f929f.png)
 
