@@ -52,7 +52,6 @@ The dimensions and fact tables are [created](DW_AdventureWorks_Dimensional_model
 
 ![image](https://user-images.githubusercontent.com/56210553/196019521-6f161c4f-f037-4d4f-a616-af152a787a47.png)
 
-
 ## Bringing the Dimensional model into PowerBI and create meaningful reports
 
 We connect Power BI to the database and import the dimensions and fact:
