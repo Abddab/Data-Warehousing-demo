@@ -63,3 +63,4 @@ Here's a simple **Power BI** [sample](AdventureWorks_USA_Sales.pbix) I have crea
 ![image](https://user-images.githubusercontent.com/56210553/196018680-4aa646ba-f5b6-4560-821b-f823852f929f.png)
 
 
+## Lessons learned and what could be done better
