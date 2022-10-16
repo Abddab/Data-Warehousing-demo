@@ -46,7 +46,7 @@ We can now use these raw tables to create views for our dimensions and fact. Cre
 
 ## Creating the Data Warehouse and loading the data
 
-The dimensions and fact tables are [created]() and populated with data :
+The dimensions and fact tables are [created](DW_AdventureWorks_Dimensional_model.sql) and populated with data :
 
 ![image](https://user-images.githubusercontent.com/56210553/196019505-9e519408-d84d-491a-acaa-cbdbe672d069.png)
 
