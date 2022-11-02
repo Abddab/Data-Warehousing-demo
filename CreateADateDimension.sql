@@ -1,6 +1,6 @@
 /*
 Script made by Chad Gibson. Link at https://gist.github.com/cgibson-dev/31ac69af102fcb5c805c
-*\
+*/
 BEGIN TRY
     DROP TABLE IF EXISTS [dbo].[DimDate]
 END TRY
