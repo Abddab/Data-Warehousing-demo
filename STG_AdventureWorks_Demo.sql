@@ -1,6 +1,7 @@
 USE [AdventureWorks2019_STG_Demo]
 GO
 /****** Object:  Table [Sales].[Address]    Script Date: 10/12/2022 1:54:34 AM ******/
+
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
