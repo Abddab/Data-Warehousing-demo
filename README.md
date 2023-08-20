@@ -34,7 +34,7 @@ Here's the **[link](STG_AdventureWorks_Demo.sql)** to the script used to create 
 
 Generally, the data source is located on another server, but for the sake of this demo, the **data source** (AdventureWorks2019) and the **staging database** (AdventureWorks2019_STG_Demo) will be located on the same server.
 
-Now that the staging database has been created, we need to populate the tables with all the source data. To do that, we will be using **SSIS**, an **ETL tool**. Here's a [basic SSIS solution](AdventureWorksOLTP_To_AdventureWorksSTG_ssis) that has the simple task of loading the data of all corresponding tables in the staging database:
+Now that the staging database has been created, we need to populate the tables with all the source data. To do that, we will be using **SSIS**, an **ETL tool**. Here's a basic SSIS solution that has the simple task of loading the data of all corresponding tables in the staging database:
 
 ![image](https://user-images.githubusercontent.com/56210553/195264955-eb452a6b-310b-46f6-828c-b4ecae0638f9.png)
 
