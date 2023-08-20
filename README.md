@@ -64,3 +64,5 @@ Here's a simple **Power BI** [sample](AdventureWorks_USA_Sales.pbix) I have crea
 
 
 ## Lessons learned and what could be done better
+
+The main part of this project that can be optimised is the SSIS solution. It is not the optimal way to repeat a similar task on a multitude of tables. There must be a way to loop the 'truncate' task on all the tables. Since the goal of the project was to get a working solution, I did not focus on optimising the solution, but it should be kept in mind for future projects.
