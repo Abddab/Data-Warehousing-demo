@@ -1,4 +1,5 @@
 USE [AdventureWorks2019_DW_Demo]
+      
 GO
 
 CREATE TABLE dbo.DimCustomer( 
